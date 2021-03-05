@@ -1,0 +1,293 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/*Box sizing and font size*/
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: clamp(2rem, 2rem + 2vw, 5rem);
+}
+
+p {
+    font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
+}
+
+/*General Styles*/
+
+body {
+    background-color: #000;
+    color: #FFF;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px repeat(4, auto) 90px;
+}
+
+/*navbar*/
+header {
+    background-color: #000;
+    border-bottom: 1px solid #FFF;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+header #navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 50px;
+}
+
+header #navbar ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+header #navbar ul li a {
+    color: #FFF;
+    font-size: clamp(100%, 0.8rem + 4vw, 1.2rem);
+    font-weight: 500;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+}
+
+header #navbar ul li a:link,
+a:visited,
+a:active {
+    color: #FFF;
+}
+
+header #navbar ul li a:hover {
+    background-color: #FFF;
+    color: #000;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/*welcome section*/
+#welcome-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    height: 100vh;
+    padding: 0 0.5rem;
+    text-align: center;
+}
+
+/*projects section*/
+#projects {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding: 3rem 0 0 0;
+}
+
+#projects .projects-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#projects .project-tile {
+    background-color: rgba(99, 96, 96, 0.384);
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    max-width: 18.75rem;
+    min-width: 12.5rem;
+    margin: 0.5rem;
+}
+
+
+#projects .project-tile img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#projects .project-tile h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+#projects .project-tile .link-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#projects .project-tile .link-container i {
+    margin: 0 0.3rem 0 0;
+}
+
+#projects .project-tile .link-container a,
+#projects .all-projects-link {
+    border: 2px solid #FFF;
+    background-color: rgba(99, 96, 96, 0.384);
+    border-radius: 5px;
+    color: #FFF;
+    display: inline-block;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0.3rem 0;
+    text-align: center;
+    width: 45%;
+}
+
+#projects .project-tile .link-container a:link,
+a:visited,
+a:active,
+#projects .project-tile .visit,
+.visit:link, .visit:visited, .visit:active,
+#projects .all-projects-link:link,
+.all-projects-link:visited,
+.all-projects-link:active {
+    color: #FFF;
+}
+
+#projects .project-tile .link-container a:hover, 
+#projects .project-tile .visit:hover,
+#projects .all-projects-link:hover {
+    background-color: #000;
+    transition: background-color 0.5s ease;
+}
+
+#projects .project-tile .visit-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#projects .project-tile .visit {
+    border: 2px solid #FFF;
+    background-color: rgba(99, 96, 96, 0.384);
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    margin: 0 0 0.5rem 0;
+    padding: 0.3rem 0;
+    text-align: center;
+    width: 93%;
+}
+
+#projects .project-tile .visit i {
+    margin: 0 0 0 0.5rem;
+}
+
+#projects .all-projects-link {
+    display: block;
+    max-width: 8.659rem;
+    margin: 1rem auto auto auto;
+}
+
+/*contact section*/
+#contact-container {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    margin: 1rem 0 1rem 0;
+    padding: 2.5rem 0;
+}
+
+#contact-container p {
+    text-align: center;
+}
+
+#contact-container .contact {
+    background-color: rgba(99, 96, 96, 0.384);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem 0.5rem;
+}
+
+#contact-container .contact li {
+    margin: 0 1rem 0 1rem;
+}
+
+#contact-container .contact li a {
+    color: #FFF;
+}
+
+#contact-container .contact li a:link, a:visited, a:active {
+    color: #FFF;
+}
+
+/*footer*/
+footer {
+    border-top: 1px solid #FFF;
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+}
+
+footer ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+footer li {
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+footer a {
+    color:#FFF;
+}
+
+footer a:link, a:visited, a:active {
+    color: #FFF;
+}
+
+footer i {
+    margin: 0 0.5rem 0 0;
+}
+
+footer p {
+    color: #FFF;
+    display: block;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+}
+
+@media (min-width: 660px) {
+
+    header #navbar ul {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+    }
+
+    #projects .projects-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #projects .all-projects {
+        display: block;
+        width: 100%;
+    }
+}
