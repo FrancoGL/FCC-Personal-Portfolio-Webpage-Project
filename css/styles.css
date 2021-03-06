@@ -140,8 +140,7 @@ header #navbar ul li a:hover {
     margin: 0 0.3rem 0 0;
 }
 
-#projects .project-tile .link-container a,
-#projects .all-projects-link {
+#projects .project-tile .link-container a {
     border: 2px solid #FFF;
     background-color: rgba(99, 96, 96, 0.384);
     border-radius: 5px;
@@ -157,16 +156,14 @@ header #navbar ul li a:hover {
 a:visited,
 a:active,
 #projects .project-tile .visit,
-.visit:link, .visit:visited, .visit:active,
-#projects .all-projects-link:link,
-.all-projects-link:visited,
-.all-projects-link:active {
+.visit:link,
+.visit:visited,
+.visit:active {
     color: #FFF;
 }
 
-#projects .project-tile .link-container a:hover, 
-#projects .project-tile .visit:hover,
-#projects .all-projects-link:hover {
+#projects .project-tile .link-container a:hover,
+#projects .project-tile .visit:hover {
     background-color: #000;
     transition: background-color 0.5s ease;
 }
@@ -191,12 +188,6 @@ a:active,
 
 #projects .project-tile .visit i {
     margin: 0 0 0 0.5rem;
-}
-
-#projects .all-projects-link {
-    display: block;
-    max-width: 8.659rem;
-    margin: 1rem auto auto auto;
 }
 
 /*contact section*/
@@ -228,7 +219,9 @@ a:active,
     color: #FFF;
 }
 
-#contact-container .contact li a:link, a:visited, a:active {
+#contact-container .contact li a:link,
+a:visited,
+a:active {
     color: #FFF;
 }
 
@@ -251,10 +244,12 @@ footer li {
 }
 
 footer a {
-    color:#FFF;
+    color: #FFF;
 }
 
-footer a:link, a:visited, a:active {
+footer a:link,
+a:visited,
+a:active {
     color: #FFF;
 }
 
